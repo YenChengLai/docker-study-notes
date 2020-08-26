@@ -42,7 +42,19 @@ docker build .
 
 ![&#x7B2C;&#x4E8C;&#x6B21;&#x57F7;&#x884C;](../.gitbook/assets/jie-tu-20200826-xia-wu-5.01.22.png)
 
+### 建立別名
 
+許多知名開發工具都有自己的docker image，例如Redis、Node.js等等，我們也因此可以用簡單的指令啟動container，例如：
 
+```text
+docker run hello-world
+```
 
+在建立自己的Docker Image時，我們也可以透過指令給予別名，指令圖解如下：
+
+![credit to: Stephen Grider](../.gitbook/assets/jie-tu-20200826-xia-wu-5.21.17.png)
+
+細部分解中間的tag部分：
+
+![credit to: Stephen Grider](../.gitbook/assets/jie-tu-20200826-xia-wu-5.20.07.png)
 
