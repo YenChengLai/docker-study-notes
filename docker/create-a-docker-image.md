@@ -32,6 +32,16 @@ docker build .
 * CMD：指定container啟動時要執行的指令，只能有一條CMD指令，重複僅執行最後一次。
 * 其餘指令可參考：[https://philipzheng.gitbook.io/docker\_practice/dockerfile/instructions](https://philipzheng.gitbook.io/docker_practice/dockerfile/instructions)
 
+### 注意事項
+
+* 不論是RUN或者是CMD，每一條指令都會在Docker Image Cache中產生執行過程的中繼container，如下圖。
+
+![&#x7B2C;&#x4E00;&#x6B21;&#x57F7;&#x884C;](../.gitbook/assets/jie-tu-20200826-xia-wu-4.36.27.png)
+
+* 一旦已經在Image Cache中產生過container，只要**執行順序不變** \(因為不同的執行順序會產生不同內容的File System Snapshot\)，docker就會從Image Cache中取得既有的container進行操作，藉以提升效能與節約時間，如下圖。
+
+![&#x7B2C;&#x4E8C;&#x6B21;&#x57F7;&#x884C;](../.gitbook/assets/jie-tu-20200826-xia-wu-5.01.22.png)
+
 
 
 
