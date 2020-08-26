@@ -13,5 +13,20 @@
 3. 交由Docker Server進行包裝。
 4. 得到Docker Image檔案。
 
+### 建立Dockerfile
+
+要建立一個Docker Image，我們首先要建立一個Dockerfile，下圖是一個Dockerfile的案例：\(路徑沒有限制，Dockerfile本身沒有副檔名\)
+
+![](../.gitbook/assets/jie-tu-20200826-xia-wu-3.21.04.png)
+
+圖中指令說明
+
+* FROM：根據哪一個docker image去建立base image作為基礎。
+* RUN：在base image的檔案系統中使用shell執行命令。
+* CMD：指定container啟動時要執行的指令，只能有一條CMD指令，重複僅執行最後一次。
+* 其餘指令可參考：[https://philipzheng.gitbook.io/docker\_practice/dockerfile/instructions](https://philipzheng.gitbook.io/docker_practice/dockerfile/instructions)
+
+
+
 
 

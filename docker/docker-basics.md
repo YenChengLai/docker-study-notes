@@ -16,7 +16,7 @@ Docker是為了要解決我們遭遇到的環境問題，在Docker出現以前�
 
 ![credit to: Stephen Grider](../.gitbook/assets/jie-tu-20200825-shang-wu-10.16.41.png)
 
-### Docker CLI 和Docker Server
+### Docker CLI 和 Docker Server
 
 開發人員在終端是透過Docker Client \(CLI\) 操作，而真正執行Docker的核心運作\(建立Docker Image、創造container等等\)的是Docker Server。
 
