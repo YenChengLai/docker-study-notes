@@ -58,3 +58,11 @@ docker run hello-world
 
 ![credit to: Stephen Grider](../.gitbook/assets/jie-tu-20200826-xia-wu-5.20.07.png)
 
+別名的最前段為使用者的Docker ID，以 / 隔開後接自訂名稱\(建議以專案或Repository名稱為主\)，最後：後接版本號。測試如下圖：
+
+![](../.gitbook/assets/jie-tu-20200827-shang-wu-9.07.33.png)
+
+啟動該Docker Image時，除非要指定先前的版本，否則預設會拿到最新的版本：
+
+![](../.gitbook/assets/jie-tu-20200827-shang-wu-9.12.32.png)
+
