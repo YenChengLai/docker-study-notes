@@ -38,5 +38,17 @@ docker compose設定上其實不複雜，就是透過一個YAML檔案，遵守�
 * ports：建立對應port號，語法為「本地端port：container中的port」，效果同docker run -p
 * restart：container出錯時的重啟模式
 
+### Docker Compose指令
 
+docker-compose.yml檔案設定完成後，我們就可以透過docker compose CLI的指令按照檔案中的設定建立container：
+
+![credit to: Stephen Grider](../.gitbook/assets/jie-tu-20200831-xia-wu-5.12.41.png)
+
+上圖中docker-compose up指令會使docker解析該路徑底下的docker-compose.yml檔案，並依此建立image，再以image產生container，如果我們有更新code的內容，切記要加上**--build**，docker才會重新建立image而不是在image cache拿既有的image使用，範例如下：
+
+![](../.gitbook/assets/jie-tu-20200831-xia-wu-5.18.09.png)
+
+我們也可以透過docker-compose up -d讓整個container在背景執行，docker-composer down則是在要關閉docker，範例如下：
+
+![](../.gitbook/assets/jie-tu-20200831-xia-wu-5.33.50.png)
 
