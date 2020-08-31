@@ -10,5 +10,15 @@
 
 ![credit to: Stephen Grider](../.gitbook/assets/jie-tu-20200831-xia-wu-3.26.35.png)
 
+### Docker Compose是什麼
+
+要使Container之間彼此能夠溝通，開發人員可以透過對本機溝通來達到這個目的，譬如指定各container對應到本地端的指定port號，但這麼做的代價就是我們要使用複雜的指令才能做到。然而使用docker compose可以幫助我們輕鬆做到這件事，究竟什麼是docker compose：
+
+1. 是docker中的另一套獨立的CLI，在安裝docker時已一併安裝。
+2. 用來同時啟動多個docker container。
+3. 自動設定container溝通時需要傳給docker run的複雜參數。
+
+
+
 
 
