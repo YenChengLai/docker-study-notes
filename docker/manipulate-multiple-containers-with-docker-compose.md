@@ -61,3 +61,14 @@ docker-compose.yml檔案設定完成後，我們就可以透過docker compose CL
 * 0： Container停止執行但視為正常，通常是人為在程式中停止container運行。
 * 其他：Container不正常停止執行，表示有錯誤發生所導致。
 
+### Container Restart Policies
+
+前面提到container停止的情境，當複數container中某個container崩潰停止時，我們可以在前面提到的docker-compose.yml中針對每一個container設定對應的重啟政策，當container停止時就會有相對應的處理，一共有以下四種：
+
+![credit to: Stephen Grider](../.gitbook/assets/jie-tu-20200902-shang-wu-9.55.57.png)
+
+1. no：預設值，即永遠不嘗試重啟。
+2. always：永遠嘗試重啟。
+3. on-failure：前述的status code不為0時才重啟。
+4. unless-stopped：除非明確給予container停止指令，否則都會重啟。
+
