@@ -52,3 +52,12 @@ docker-compose.yml檔案設定完成後，我們就可以透過docker compose CL
 
 ![](../.gitbook/assets/jie-tu-20200831-xia-wu-5.33.50.png)
 
+### Container Exit Code
+
+在使用container時，最需要注意的就是container因為錯誤而崩潰的情況，這時候就要查看log中的container status code，粗略可以分為以下兩類：
+
+![credit to: Stephen Grider](../.gitbook/assets/jie-tu-20200902-shang-wu-9.54.41.png)
+
+* 0： Container停止執行但視為正常，通常是人為在程式中停止container運行。
+* 其他：Container不正常停止執行，表示有錯誤發生所導致。
+
