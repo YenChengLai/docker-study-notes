@@ -72,3 +72,10 @@ docker-compose.yml檔案設定完成後，我們就可以透過docker compose CL
 3. on-failure：前述的status code不為0時才重啟。
 4. unless-stopped：除非明確給予container停止指令，否則都會重啟。
 
+### 其他注意事項
+
+* restart policy 如果要寫no，記得加上單或雙引號，YAML檔中no代表false，所以要用引號使它作為字串識別。
+* 不同於docker ps指令，docker-compose也提供ps供使用者查詢該群組container狀態，唯需在有docker-compose.yml檔案所在的路徑下呼叫，否則會出現錯誤。
+
+![](../.gitbook/assets/jie-tu-20200902-shang-wu-10.49.41.png)
+
