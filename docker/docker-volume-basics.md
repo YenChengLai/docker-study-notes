@@ -16,3 +16,15 @@
 
 以指定參照的方式取代檔案快照，這麼一來container中操作的資料就會和本地的資料產生連動，container操作的資料也會留在本地端檔案路徑中。
 
+#### Docker Volume的指令如下：
+
+![credit to: Stephen Grider](../.gitbook/assets/jie-tu-20200904-xia-wu-3.11.11.png)
+
+-v指令代表volume
+
+* -v /app/node\_modules  =&gt;  設定書籤，該路徑不做任何參照
+* -v $\(pwd\):/app  =&gt;  以：做為參照對應，前代表本地路徑，後代表container內路徑
+* $\(pwd\) =&gt; present working directory，這個系統參數會取得目前工作目錄的路徑
+
+
+
