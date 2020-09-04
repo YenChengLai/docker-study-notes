@@ -14,7 +14,7 @@
 
 ![credit to: Stephen Grider](../.gitbook/assets/jie-tu-20200904-shang-wu-11.52.02.png)
 
-以指定參照的方式取代檔案快照，這麼一來container中操作的資料就會和本地的資料產生連動，container操作的資料也會留在本地端檔案路徑中。
+以指定參照的方式取代檔案快照，這麼一來container中操作的資料就會和本地的資料產生連動，container操作的資料也會留在本地端檔案路徑中，如此一來，當本地端的檔案有變動時，也會連動到container中的檔案，而不用一直跑docker run來重包image檔。
 
 #### Docker Volume的指令如下：
 
@@ -26,5 +26,11 @@
 * -v $\(pwd\):/app  =&gt;  以：做為參照對應，前代表本地路徑，後代表container內路徑
 * $\(pwd\) =&gt; present working directory，這個系統參數會取得目前工作目錄的路徑
 
+### 使用Docker Compose簡化指令
 
+在docker compose的章節有提到，docker compose可以用來設定需要傳給docker run的複雜參數，因此我們也可以在docker-compose.yml中設定docker volume的設定：
+
+![](../.gitbook/assets/jie-tu-20200904-xia-wu-4.48.21.png)
+
+在 -v 指令中的參數直接寫在docker compose檔案的volumes中，就能夠直接簡化我們下docker run的指令了，唯一不同的是$\(pwd\)是系統參數指令，在docker compose中因為會直接在該路徑執行，以 . 代表現在目錄位置即可。
 
